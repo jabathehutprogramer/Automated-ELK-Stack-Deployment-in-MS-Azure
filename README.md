@@ -1,7 +1,8 @@
 # Automated-ELK-Stack-Deployment-in-MS-Azure
 # Heading level 1   Automated ELK Stack Deployment 
 
-Purpose of this document:
+# Heading level 3  Purpose of this document:
+
 	This document contains a description of intended topology and the process for establishing an ELK server to monitor and provide telemetry for the web servers already established. 
 
 
