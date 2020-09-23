@@ -1,7 +1,7 @@
 # Automated-ELK-Stack-Deployment-in-MS-Azure
-# Heading level 1   Automated ELK Stack Deployment 
+# Automated ELK Stack Deployment 
 
-# Heading level 3  Purpose of this document:
+## Purpose of this document:
 
 	This document contains a description of intended topology and the process for establishing an ELK server to monitor and provide telemetry for the web servers already established. 
 
@@ -20,14 +20,17 @@ The jump-box in the group does not provide any service to the outside world but 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the changes and monitor system logs and metrics such as CPU load, and possible attacks such as sudo escalation failures and SSH login attempts.
 The configuration details of each machine may be found below. Note: Use the Markdown Table Generator to add/remove values from the table. 
 
+| Machine Name        | Function           | IP address
+  |  Operating System  |
+| ------------- |:-------------:| -----:|   -----:|
+| JumpBox      | Gateway |52.156.78.1|    |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
-Machine Name
-Function
-IP address
-Operating System
-JumpBox
-Gateway
-52.156.78.1
+
+
+
+
 Linux
 Web-1
 DVWA
