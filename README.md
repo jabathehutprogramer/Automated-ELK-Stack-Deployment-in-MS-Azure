@@ -101,7 +101,7 @@ To check the installation, from the public machine navigate to:
 
 These Beats allow us to collect the following information from each machine: the logs and metrics from our unique environments and document them with essential metadata from hosts, container platforms like Docker and Kubernetes,
 
-BEATS output: ![BEATS output](https://github.com/jabathehutprogramer/Automated-ELK-Stack-Deployment-in-MS-Azure/blob/master/Diagrams/beats-output.png)
+BEATS output: ![BEATS output](https://github.com/jabathehutprogramer/Automated-ELK-Stack-Deployment-in-MS-Azure/blob/master/Diagrams/beats-output2.png)
 
 ## Using the Playbook 
 In order to use the playbook, you will need to have an Ansible control node already configured. In our case it was already created and is in fact the jumpbox that was configured already. 
