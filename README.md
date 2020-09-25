@@ -49,13 +49,68 @@ A summary of the access policies in place can be found in the table below.
 ## Elk Configuration 
 Ansible was used to automate the configuration of the ELK machine. No configuration was performed manually, which is advantageous because it makes the configuration repeatable, reusable, and eliminates human error in the configuration process. 
 
-To run the configuration you need to SSH into the jumpbox (configure the jumpbox, when created, with the proper public key from your machine). From there you need to check which docker containers are running using:
-**sudo docker container list -a** 
-To get a list of the dockers available.
+To run the configuration you need to SSH into the jumpbox (configure the jumpbox, when created, with the proper public key from your machine). 
+
+From there you need to check which docker containers are running using:
+**sudo docker container list -a**   to get a list of the dockers available.
+
 Start and attach to the proper docker using: 
-**sudo docker start <docker name>**
-**sudo docker attach <docker name>**
+**sudo docker start (docker name)**
+**sudo docker attach (docker name)**
 
 From there you will need to make sure that the /etc/ansible/hosts files is updated with the lines describing the [elkservers] and indicated the internal IP address and add the lines identifying the ansible interpreter as in the 
+
+**/etc/ansible/hosts** file:
+'''
+# This is the default ansible 'hosts' file.
+#
+# It should live in /etc/ansible/hosts
+#
+#   - Comments begin with the '#' character
+#   - Blank lines are ignored
+#   - Groups of hosts are delimited by [header] elements
+#   - You can enter hostnames or ip addresses
+#   - A hostname/ip can be a member of multiple groups
+
+# Ex 1: Ungrouped hosts, specify before any group headers.
+
+## green.example.com
+## blue.example.com
+## 192.168.100.1
+## 192.168.100.10
+
+# Ex 2: A collection of hosts belonging to the 'webservers' group
+ [elkservers]
+10.1.0.4 ansible_python_interpreter=/usr/bin/python3
+
+ [webservers]
+## alpha.example.org
+## beta.example.org
+## 192.168.1.100
+## 192.168.1.110
+10.0.0.6 ansible_python_interpreter=/usr/bin/python3
+10.0.0.10 ansible_python_interpreter=/usr/bin/python3
+10.0.0.12 ansible_python_interpreter=/usr/bin/python3
+# If you have multiple hosts following a pattern you can specify
+# them like this:
+
+## www[001:006].example.com
+
+# Ex 3: A collection of database servers in the 'dbservers' group
+
+## [dbservers]
+##
+## db01.intranet.mydomain.net
+## db02.intranet.mydomain.net
+## 10.25.1.56
+## 10.25.1.57
+
+# Here's another example of host ranges, this time there are no
+# leading 0s:
+
+## db-[99:101]-node.example.com
+
+'''
+
 
 
