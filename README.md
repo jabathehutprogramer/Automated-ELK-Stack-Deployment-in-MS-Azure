@@ -70,3 +70,48 @@ When you run it the screen output should look like this:
 
 RedTeam Network Diagram: ![ RedTeam Network Diagram](https://github.com/jabathehutprogramer/Automated-ELK-Stack-Deployment-in-MS-Azure/blob/master/Diagrams/RedTeam%20Network%20Diagram.png)
 
+The playbook implements the following tasks: 
+- Connects securely to the ELK server and gathers status on what is installed
+- Installs docker.io
+- Installs python3 pip
+- Installs docker. This is needed so Ansible can then utilize that module to control docker containers
+- Increases available memory. This is needed to allow for always restarting the ELK server 
+- Last thing it does is start the ELK server and enables it to communicate over the established ports for ELK Kibana.
+
+The following screenshot displays the result of running docker ps after successfully configuring the ELK instance. 
+## Instert image here 
+
+## Target Machines & Beats 
+This ELK server is configured to monitor the following machines: 
+
+|  Name         |IP Address         |
+| ------------- |-------------------|
+| Web-1         | 10.0.0.6          |
+| Web-2         | 10.0.0.10         |
+| Web-3         | 10.0.0.12         |
+
+We have installed the following Beats on these machines using the following curl command:
+	**curl -L -0 https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.1-amd64.deb**
+	which is included in the ansible playbook file: **filebeat-playbook.yml**
+	## Inster linke here.
+To check the installation, from the public machine navigate to:
+**http://[40.117.212.165]:5601/app/kibana**     the IP address being that of the ELK Server.
+
+These Beats allow us to collect the following information from each machine: the logs and metrics from our unique environments and document them with essential metadata from hosts, container platforms like Docker and Kubernetes,
+
+## INstert image here
+
+## Using the Playbook 
+In order to use the playbook, you will need to have an Ansible control node already configured. In our case it was already created and is in fact the jumpbox that was configured already. 
+
+SSH into the control node and follow the steps below:
+ - Copy the **filebeat-playbook.yml** file to **/etc/ansible** directory. 
+ 
+- Update the **/etc/filebeat/filebeat-config.yml**  file to include:
+   **Hosts:[“10.1.0.4:9200”]**
+   **Username: “elastic”**
+   **Password: “changme”** , this password can be changed later.
+   
+- Run the playbook, and navigate to already open  to check that the installation worked as expected. 
+
+
