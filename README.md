@@ -62,17 +62,17 @@ From there you will need to make sure that the /etc/ansible/hosts files is updat
 
 **/etc/ansible/hosts** file:
 '''
-# This is the default ansible 'hosts' file.
-#
-# It should live in /etc/ansible/hosts
-#
-#   - Comments begin with the '#' character
-#   - Blank lines are ignored
-#   - Groups of hosts are delimited by [header] elements
-#   - You can enter hostnames or ip addresses
-#   - A hostname/ip can be a member of multiple groups
+&# This is the default ansible 'hosts' file.
+&#
+&# It should live in /etc/ansible/hosts
+&#
+&#   - Comments begin with the '#' character
+&#   - Blank lines are ignored
+&#   - Groups of hosts are delimited by [header] elements
+&#   - You can enter hostnames or ip addresses
+&#   - A hostname/ip can be a member of multiple groups
 
-# Ex 1: Ungrouped hosts, specify before any group headers.
+&# Ex 1: Ungrouped hosts, specify before any group headers.
 
 ## green.example.com
 ## blue.example.com
