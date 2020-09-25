@@ -60,11 +60,11 @@ Start and attach to the proper docker using:
 
 From there you will need to make sure that the /etc/ansible/hosts files is updated with the lines describing the [elkservers] and indicated the internal IP address and add the lines identifying the ansible interpreter as in the 
 
-**/etc/ansible/hosts** file:
-#### INSTERT /etc/ansible/hosts file linke here 
+**https://github.com/jabathehutprogramer/Automated-ELK-Stack-Deployment-in-MS-Azure/blob/master/Ansible/hosts**
 
 Then from the docker container run the command: 
 **ansible-playbook /etc/ansible/install-elk.yml**
+**https://github.com/jabathehutprogramer/Automated-ELK-Stack-Deployment-in-MS-Azure/blob/master/Ansible/install-elk.yml**
 
 When you run it the screen output should look like this:
 
@@ -95,7 +95,7 @@ We have installed the following Beats on these machines using the following curl
 
 **curl -L -0 https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.1-amd64.deb**
 	which is included in the ansible playbook file: **filebeat-playbook.yml** in this repository under Ansible files.
-	## Inster linke here.
+	https://github.com/jabathehutprogramer/Automated-ELK-Stack-Deployment-in-MS-Azure/blob/master/Ansible/filebeat-playbook.yml
 To check the installation, from the public machine navigate to:
 **http://[40.117.212.165]:5601/app/kibana**     the IP address being that of the ELK Server.
 
