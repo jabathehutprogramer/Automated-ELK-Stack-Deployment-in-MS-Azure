@@ -92,8 +92,9 @@ This ELK server is configured to monitor the following machines:
 | Web-3         | 10.0.0.12         |
 
 We have installed the following Beats on these machines using the following curl command:
-	**curl -L -0 https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.1-amd64.deb**
-	which is included in the ansible playbook file: **filebeat-playbook.yml**
+
+**curl -L -0 https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.1-amd64.deb**
+	which is included in the ansible playbook file: **filebeat-playbook.yml** in this repository under Ansible files.
 	## Inster linke here.
 To check the installation, from the public machine navigate to:
 **http://[40.117.212.165]:5601/app/kibana**     the IP address being that of the ELK Server.
