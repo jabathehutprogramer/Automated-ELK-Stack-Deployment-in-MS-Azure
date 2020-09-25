@@ -78,8 +78,9 @@ The playbook implements the following tasks:
 - Increases available memory. This is needed to allow for always restarting the ELK server 
 - Last thing it does is start the ELK server and enables it to communicate over the established ports for ELK Kibana.
 
-The following screenshot displays the result of running docker ps after successfully configuring the ELK instance. 
-## Instert image here 
+The following screenshot displays the result of running **docker ps** after successfully configuring the ELK instance. 
+ 
+https://github.com/jabathehutprogramer/Automated-ELK-Stack-Deployment-in-MS-Azure/blob/master/Diagrams/docker-ps.png
 
 ## Target Machines & Beats 
 This ELK server is configured to monitor the following machines: 
