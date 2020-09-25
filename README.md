@@ -68,7 +68,7 @@ Then from the docker container run the command:
 
 When you run it the screen output should look like this:
 
-install-elk.yml output:!([install-elk.yml output]https://github.com/jabathehutprogramer/Automated-ELK-Stack-Deployment-in-MS-Azure/blob/master/Diagrams/install-elk-output.png)
+install-elk.yml output:![install-elk.yml output](https://github.com/jabathehutprogramer/Automated-ELK-Stack-Deployment-in-MS-Azure/blob/master/Diagrams/install-elk-output.png)
 
 The playbook implements the following tasks: 
 - Connects securely to the ELK server and gathers status on what is installed
