@@ -17,38 +17,15 @@ The main purpose of this network is to have a load-balanced and monitored instan
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network. Load balancing also makes sure tha the load is shared by all server machines in the group. It also provides for some level of DoS protection by diverting the load to another machine if one of hte machines is inundated with the DoS attack.
 The jump-box in the group does not provide any service to the outside world but instead, it is used as a control machine to configure and provision the web machines and the ELK-server. 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the changes and monitor system logs and metrics such as CPU load, and possible attacks such as sudo escalation failures and SSH login attempts.
-The configuration details of each machine may be found below. Note: Use the Markdown Table Generator to add/remove values from the table. 
+The configuration details of each machine may be found below.  
 
-| Machine Name        | Function           | IP address
-  |  Operating System  |
-| ------------- |:-------------:| -----:|   -----:|
-| JumpBox      | Gateway |52.156.78.1|    |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-
-
-
-
-
-Linux
-Web-1
-DVWA
-10.0.0.6
-Linux
-Web-2
-DVWA
-10.0.0.10
-Linux
-Web-3
-DVWA
-10.0.0.12
-Linux
-ELK-Server
-ELK
-Server
-
-Pub:40.117.212.165
-Priv: 10.1.0.4
+| Machine Name  | Function      | IP address   |  Operating System  |
+| ------------- |---------------|--------------|--------------------|
+| JumpBox       | Gateway       |52.156.78.1   |  Linux             |
+| Web-1         | DVWA          |10.0.0.6      |  Linux             |
+| JumpBox       | DVWA          |10.0.0.10     |  Linux             |
+| JumpBox       | DVWA          |10.0.0.12     |  Linux             |
+| ELK-Server    | ELK Server    |40.117.212.165|  Linux             |
+|               |               |10.1.0.4      |                    |
 
 
-Linux
