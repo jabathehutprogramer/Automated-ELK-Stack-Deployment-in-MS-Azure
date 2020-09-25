@@ -23,9 +23,39 @@ The configuration details of each machine may be found below.
 | ------------- |---------------|--------------|--------------------|
 | JumpBox       | Gateway       |52.156.78.1   |  Linux             |
 | Web-1         | DVWA          |10.0.0.6      |  Linux             |
-| JumpBox       | DVWA          |10.0.0.10     |  Linux             |
-| JumpBox       | DVWA          |10.0.0.12     |  Linux             |
+| Web-2         | DVWA          |10.0.0.10     |  Linux             |
+| Web-3         | DVWA          |10.0.0.12     |  Linux             |
 | ELK-Server    | ELK Server    |40.117.212.165|  Linux             |
 |               |               |10.1.0.4      |                    |
+
+
+## Access Policies 
+The machines on the internal network are not exposed to the public Internet. They get their traffic through the Load Balancer. These machines can also be accessed from the Jump-box for configuration and management purposes.
+
+Only the ELK-server machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:  104.220.125.86
+
+
+A summary of the access policies in place can be found in the table below. 
+ 
+|  Name         | Public Accessible | Allowed IP address |
+| ------------- |-------------------|--------------------|
+| JumpBox       | YES               |104.220.125.86      |
+| Web-1         | NO                |10.0.0.1-254        |
+| Web-2         | NO                |10.0.0.1-254        |
+| Web-3         | NO                |10.0.0.1-254        |
+| ELK-Server    | YES               |104.220.125.86      |
+
+
+## Elk Configuration 
+Ansible was used to automate the configuration of the ELK machine. No configuration was performed manually, which is advantageous because it makes the configuration repeatable, reusable, and eliminates human error in the configuration process. 
+
+To run the configuration you need to SSH into the jumpbox (configure the jumpbox, when created, with the proper public key from your machine). From there you need to check which docker containers are running using:
+**sudo docker container list -a** 
+To get a list of the dockers available.
+Start and attach to the proper docker using: 
+**sudo docker start <docker name>**
+**sudo docker attach <docker name>**
+
+From there you will need to make sure that the /etc/ansible/hosts files is updated with the lines describing the [elkservers] and indicated the internal IP address and add the lines identifying the ansible interpreter as in the 
 
 
